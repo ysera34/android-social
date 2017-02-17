@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.planet.wondering.applink">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Main2Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:host="verification_email"
+                    android:scheme="chemi.wondering.planet.com"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Main3Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <!-- <data -->
+                <!-- android:scheme="http" -->
+                <!-- android:host="verification_email"/> -->
+
+                <data
+                    android:host="www.wondering.planet.com"
+                    android:pathPrefix="/verification_email"
+                    android:scheme="http"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Main4Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:host="www.chemi.com"
+                    android:scheme="chemi.wondering.planet.com"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Main5Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:host="chemi"
+                    android:scheme="verification"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
